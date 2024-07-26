@@ -1,0 +1,11 @@
+clean()
+i=0
+O=run(e='Kirchhoff_rod',c='cur1')
+B=run(O('UZ4'),c='load')  
+C=run(B('UZ4'),c='length') # Change this index to UZ10-UZ16 for obtaining index 2 equilibria. The bifurcation surface looks non-smooth in this case
+rpoints=C("UZ")
+for solution in rpoints:
+	C=C+run(solution,c='loadrotate')
+	i=i+1
+save(C,'data_torsion_varyL')
+clean()
