@@ -30,7 +30,7 @@
       
       ! Specify the bending stiffness A1 and Torsion stiffness C1
       A1=1.0
-      C1=1.0/1.3
+      C1=1.0/1.5
      
       ! Length of the elastic rod
       L1=PAR(3)
